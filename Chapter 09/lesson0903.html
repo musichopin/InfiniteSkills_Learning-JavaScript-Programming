@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>JavaScript Modules</title>
+<link rel="stylesheet" type="text/css" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+<h1>Modules</h1>
+
+<div id="message">Messages will appear here</div>
+
+<script src="scripts/module.js"></script>
+<script>
+Lib.Output.Clear();
+Lib.Output.Write("This is my first message.");
+Lib.Output.$("This is my second message.");
+Lib.Output.SetColor("#C00");
+Lib.Output.$("Modules are great!");
+var x = Lib.Output.FormatMessage("test"); // this will fail
+Lib.Output.$(x);
+</script>
+
+</body>
+</html>

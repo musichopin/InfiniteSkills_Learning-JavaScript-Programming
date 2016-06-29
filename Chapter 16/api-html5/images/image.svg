@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 299 299" preserveAspectRatio="xMidYMid meet">
+	<title>SVG image</title>
+	<desc>example SVG image</desc>
+	<g id="main">
+
+		<line id="line" x1="10" y1="10" x2="290" y2="290" stroke-width="6" stroke="#333" stroke-linecap="round" />
+	
+		<path id="curve" d="M10,150 C10,0 290,300 290,150" stroke-width="6" stroke="#33c" fill="none" stroke-linecap="round" />
+		
+		<circle id="circle" cx="150" cy="150" r="100" stroke-width="6" stroke="#c33" fill="none" />
+		
+	</g>
+</svg>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Using XMLHttpRequest for Ajax Calls</title>
+<link rel="stylesheet" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+	<header>
+		<h1>An Introduction to JavaScript</h1>
+		<p>Using XMLHttpRequest for Ajax Calls (returns JSON)</p>
+	</header>
+	
+	<article>
+		
+		<form id="speedform" action="http://localhost/js/speedconvert.php" method="get">
+			<fieldset>
+			<legend>Speed conversion</legend>
+			
+			<label for="speed">Speed:</label>
+			<input type="text" id="speed" name="speed" value="0" />
+			
+			<select type="text" id="unit" name="unit">
+				<option value="mph">miles per hour</option>
+				<option value="kph">kilometers per hour</option>
+				<option value="fps">feet per second</option>
+				<option value="mps">meters per second</option>
+			</select>
+			
+			<input type="hidden" name="format" value="json" />
+			
+			<button type="submit">Convert</button>
+			
+			</fieldset>
+		</form>
+		
+		<div id="output">
+		
+			<table>
+				<tr><th>mph</th><td>0.00</td></tr>
+				<tr><th>kph</th><td>0.00</td></tr>
+				<tr><th>fps</th><td>0.00</td></tr>
+				<tr><th>mps</th><td>0.00</td></tr>
+			</table>
+		
+		</div>
+		
+	</article>
+
+<script src="scripts/ajax-xhr-json.js"></script>
+</body>
+</html>

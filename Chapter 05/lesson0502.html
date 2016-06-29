@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Function arguments</title>
+<link rel="stylesheet" type="text/css" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+<h1>Function arguments</h1>
+
+<script>
+
+function showMessage() {
+	var s = "";
+	for (var i = 0; i < arguments.length; i++) {
+		s += arguments[i] + " ";
+	}
+	return s;
+}
+
+console.log( showMessage("Hello", "from", "JavaScript", "again") );
+
+</script>
+
+</body>
+</html>

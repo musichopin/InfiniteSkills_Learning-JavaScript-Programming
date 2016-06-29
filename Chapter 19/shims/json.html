@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>JSON Shim Testing</title>
+<!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="stylesheet" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+	<header>
+		<h1>An Introduction to JavaScript</h1>
+		<p>JSON Shim Testing</p>
+	</header>
+
+	<article>
+
+		<p>This page uses JSON.stringify and JSON.parse to serialize and deserialize the following object:</p>
+
+		<pre>var obj =
+	{
+		bool:	true,
+		str:	"text string",
+		num:	12345,
+		n:		null,
+		u:		undefined,
+		arr:	[ 1,1,2,3,5,8,[13,21,34] ],
+		ob:		{
+					a: "string",
+					b: true,
+					c: 321,
+					d: [ 3,2,1 ],
+					e: {
+						f: 42,
+						g: [ 3.14,1.618 ]
+					}
+				}
+	};</pre>
+
+		<h2>Output Messages</h2>
+		<div id="log"></div>
+
+		<hr />
+		<p>For more shims, refer to:<br />
+		<a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills">github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills</a></p>
+
+	</article>
+
+
+<script src="scripts/shim-json.js"></script>
+<script>
+// output function
+var log = document.getElementById("log");
+function Output(msg) {
+	log.innerHTML += "<p>" + msg + "</p>";
+}
+
+// define object
+var obj =
+	{
+		bool:	true,
+		str:	"text string",
+		num:	12345,
+		n:		null,
+		u:		undefined,
+		arr:	[ 1,1,2,3,5,8,[13,21,34] ],
+		ob:		{
+					a: "string",
+					b: true,
+					c: 321,
+					d: [ 3,2,1 ],
+					e: {
+						f: 42,
+						g: [ 3.14,1.618 ]
+					}
+				}
+	};
+
+// retrive test values
+Output("Values from original obj:");
+Output("<strong>obj.str:</strong> "+obj.str);
+Output("<strong>obj.num:</strong> "+obj.num);
+Output("<strong>obj.arr[6][1]:</strong> "+obj.arr[6][1]);
+Output("<strong>obj.ob.e.f:</strong> "+obj.ob.e.f);
+
+// serialize to JSON
+var jsonobj = JSON.stringify(obj);
+Output("Serializing to JSON:");
+Output(jsonobj);
+
+// deserialize back to object
+obj = JSON.parse(jsonobj);
+
+Output("Values from deserialized obj:");
+Output("<strong>obj.str:</strong> "+obj.str);
+Output("<strong>obj.num:</strong> "+obj.num);
+Output("<strong>obj.arr[6][1]:</strong> "+obj.arr[6][1]);
+Output("<strong>obj.ob.e.f:</strong> "+obj.ob.e.f);
+</script>
+</body>
+</html>

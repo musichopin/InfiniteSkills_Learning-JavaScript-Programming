@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>HTML5 Canvas</title>
+<link rel="stylesheet" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+	<header>
+		<h1>An Introduction to JavaScript</h1>
+		<p>HTML5 Canvas</p>
+	</header>
+
+	<article>
+
+		<canvas id="mycanvas" width="300" height="300"></canvas>
+
+	</article>
+
+<script>
+var canvas = document.getElementById("mycanvas");
+if (canvas.getContext) {
+
+	// start animation
+	var cxt = canvas.getContext("2d");
+	cxt.fillStyle = "rgba(255,255,255,0.5)";
+	
+	setInterval(function() {
+		var	x = Math.round(Math.random()*canvas.width), 
+			y = Math.round(Math.random()*canvas.height),
+			e = 20 + Math.round(Math.random()*30),
+			s = 0;
+		
+		(function() {
+			s++;
+			if (s <= e) {
+				setTimeout(arguments.callee,s);
+				var c = 255-(e-s)*3;
+				cxt.strokeStyle = "rgb("+c+","+c+","+c+")";
+				cxt.beginPath();
+				cxt.arc(x,y,s,0,Math.PI*2,true);
+				cxt.fill();
+				cxt.stroke();
+			}
+		})();
+	},100);
+
+}
+</script>
+</body>
+</html>

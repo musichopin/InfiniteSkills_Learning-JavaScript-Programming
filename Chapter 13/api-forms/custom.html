@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Custom Controls</title>
+<link rel="stylesheet" type="text/css" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+<header>
+	<h1>An Introduction to JavaScript</h1>
+	<p>Custom Controls</p>
+</header>
+
+<article>
+
+	<!-- registration form -->
+	<form id="register" action="register" method="post">
+
+		<fieldset>
+			<legend>Register</legend>
+		
+			<!-- email -->
+			<label for="email">email:</label>
+			<input type="email" id="email" name="email" autofocus required />
+
+			<!-- passwords -->
+			<label for="pass1">password:</label>
+			<input type="password" id="pass1" name="pass1" required />
+			<span id="strength"></span>
+			
+			<label for="pass2">again:</label>
+			<input type="password" id="pass2" name="pass2" required />
+
+			<button type="submit">Register</button>
+		
+		</fieldset>
+		
+	</form>
+
+</article>
+
+<script src="scripts/custom.js"></script>
+
+</body>
+</html>

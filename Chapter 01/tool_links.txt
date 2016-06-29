@@ -1,0 +1,31 @@
+Web software links
+
+Notepad++ (Windows):
+http://notepad-plus-plus.org/
+
+PSPad (Windows):
+http://www.pspad.com/
+
+TextPad (Windows):
+http://www.textpad.com/
+
+TextMate (Mac):
+http://macromates.com/
+
+SciTE:
+http://www.scintilla.org/SciTE.html
+
+Aptana:
+http://www.aptana.com/
+
+Sublime Text:
+http://www.sublimetext.com/
+
+Internet Information Server (Windows):
+http://www.iis.net/
+
+Apache HTTP Server:
+http://httpd.apache.org/
+
+XAMPP:
+http://www.apachefriends.org/en/xampp.html

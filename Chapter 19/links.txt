@@ -1,0 +1,38 @@
+JavaScript (ECMAScript) specification
+http://ecma-international.org/ecma-262/5.1/
+
+Mozilla Developer Network
+https://developer.mozilla.org/en-US/docs/JavaScript 
+https://developer.mozilla.org/en-US/docs/JavaScript/Guide 
+https://developer.mozilla.org/en-US/docs/JavaScript/Reference 
+https://developer.mozilla.org/en-US/docs/JavaScript/A_re-introduction_to_JavaScript 
+
+Microsoft Developer Network 
+http://msdn.microsoft.com/en-us/library/yek4tbz0%28v=vs.94%29.aspx 
+
+Eloquent JavaScript
+http://eloquentjavascript.net/
+
+Douglas Crockford 
+http://yuiblog.com/crockford/ 
+http://javascript.crockford.com/ 
+
+John Resig
+http://ejohn.org/ 
+
+Browser-compatibility information and links
+http://caniuse.com/ 
+
+HTML5 resources
+http://html5doctor.com/ 
+
+Developer tutorials, articles and references
+http://www.sitepoint.com/ 
+http://reference.sitepoint.com/javascript 
+
+JavaScript Weekly 
+http://javascriptweekly.com/ 
+
+Search
+http://www.google.com/ 
+http://www.bing.com/ 

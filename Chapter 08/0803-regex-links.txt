@@ -1,0 +1,20 @@
+Useful Regular Expression Resources
+
+Regular Expressions on Wikipedia:
+http://en.wikipedia.org/wiki/Regular_expression
+
+Regular Expression Tutorials:
+http://www.regular-expressions.info/
+
+MDN Regular Expressions Guide:
+https://developer.mozilla.org/en/JavaScript/Guide/Regular_Expressions
+
+Regular Expression Cheatsheet:
+http://www.addedbytes.com/cheat-sheets/regular-expressions-cheat-sheet/
+
+Regular Expression Tool (click the JavaScript tab):
+http://regex.larsolavtorvik.com/
+
+regexpal Regular Expression Tool:
+http://regexpal.com/
+

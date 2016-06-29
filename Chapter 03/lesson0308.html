@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Web page output</title>
+<link rel="stylesheet" type="text/css" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+<h1>Web page output</h1>
+
+<p id="message">start message</p>
+
+<script>
+/*
+	Output the square of a number
+	By Craig Buckler
+*/
+
+// set-up variables
+var n = 42;
+var msg = n+" squared is "+(n*n);
+
+// output message
+var p = document.getElementById("message");
+p.textContent = msg;
+</script>
+
+</body>
+</html>

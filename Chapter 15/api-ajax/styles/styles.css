@@ -1,0 +1,150 @@
+*
+{
+	padding: 0;
+	margin: 0;
+}
+
+body 
+{
+	font: normal 100%/1.3em sans-serif; 
+	margin: 10px; 
+	color: #333; 
+	background-color: #fff;
+}
+
+header, article
+{
+	display: block;
+	margin: 10px;
+}
+
+header
+{
+	padding: 6px;
+	color: #fff;
+	background-color: #666;
+	border: 3px double #fff;
+}
+
+h1
+{
+	font-size: 1.4em;
+	text-align: center;
+	font-weight: normal;
+	margin-bottom: 4px;
+}
+
+header p
+{
+	text-align: center;
+	margin: 0;
+}
+
+h1
+{
+	font-size: 1.6em;
+	margin-bottom: 4px;
+}
+
+p
+{
+	margin: 0 0 0.2em 0;
+}
+
+ul
+{
+	list-style-type: disc;
+	margin: 1em 3em;
+}
+
+li
+{
+	margin: 0.8em 0;
+}
+
+a
+{
+	text-decoration: none;
+	color: #00c;
+	margin: 0;
+}
+
+img
+{
+	float: right;
+}
+
+form
+{
+	float: left;
+	overflow: auto;
+}
+
+fieldset
+{
+	padding: 20px;
+	margin: 0 50px 20px 0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+legend
+{
+	font-size: 1.2em;
+	font-weight: normal;
+	padding: 0 1em;
+	color: #333;
+}
+
+label
+{
+	clear: both;
+	display: block;
+	margin: 2px 0;
+}
+
+input, textarea, select
+{
+	font-family: arial;
+	font-size: 1em;
+	margin-bottom: 10px;
+	color: #666;
+}
+
+input#speed
+{
+	width:4em;
+	text-align: right;
+}
+
+select#unit
+{
+	width: 10em;
+}
+
+button
+{
+	clear: both;
+	display: block;
+}
+
+table
+{
+	margin: 20px 0;
+	border-collapse: collapse;
+}
+
+th, td
+{
+	width: 4em;
+	font-size: 1.5em;
+	text-align: right;
+	padding: 3px 6px;
+	border: 1px solid #666;
+}
+
+th
+{
+	font-weight: bold;
+	background-color: #ccc;
+}

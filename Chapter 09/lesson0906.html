@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Function Passing</title>
+<link rel="stylesheet" type="text/css" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+<h1>Function Passing</h1>
+
+<div id="message"></div>
+
+<script src="scripts/functionpassing.js"></script>
+<script>
+var n = [
+	[1,2,3],
+	4,
+	[
+		[5,6],
+		7
+	],
+	[8,9]
+];
+
+
+var sum = 0, e = 0;
+Lib.Array.Recurse( n, function(x) { e++; sum += x; } );
+
+document.getElementById("message").innerHTML +=
+	"<p>Array sum = " + sum + "</p>" +
+	"<p>Average = " + (sum/e) + "</p>";
+</script>
+
+</body>
+</html>

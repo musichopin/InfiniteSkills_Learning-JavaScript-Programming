@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>HTML5 SVG</title>
+<link rel="stylesheet" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+	<header>
+		<h1>An Introduction to JavaScript</h1>
+		<p>HTML5 SVG</p>
+	</header>
+
+	<article>
+
+		<object id="mysvg" type="image/svg+xml" data="images/image.svg"></object>
+
+	</article>
+
+<script>
+var mysvg = document.getElementById("mysvg");
+var svg = mysvg.contentDocument;
+
+var line = svg.getElementById("line");
+
+// animate line
+var y = 10;
+(function() {
+	y += 2;
+	line.setAttributeNS(null,"y1",y);
+	line.setAttributeNS(null,"y2",300-y);
+	if (y < 290) setTimeout(arguments.callee, 20);
+}());
+
+// create rectangle
+var rect = svg.createElementNS("http://www.w3.org/2000/svg", "rect");
+
+rect.setAttributeNS(null,"x",100);
+rect.setAttributeNS(null,"y",125);
+rect.setAttributeNS(null,"width",100);
+rect.setAttributeNS(null,"height",50);
+rect.setAttributeNS(null,"fill","#393");
+
+svg.getElementById("main").appendChild(rect);
+
+</script>
+</body>
+</html>

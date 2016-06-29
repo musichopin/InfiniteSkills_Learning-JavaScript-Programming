@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Managing Page History</title>
+<link rel="stylesheet" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+	<header>
+		<h1>An Introduction to JavaScript</h1>
+		<p>Managing Page History (page 1)</p>
+	</header>
+
+	<article>
+
+		<p>Now on PAGE 1: <a href="history2.html">view history2.html</a></p>
+	
+		<h2>window.history</h2>
+		<div id="output1"></div>
+		
+		<p><a href="#" onclick="window.history.back();return false;">window.history.back()</a></p>
+		<p><a href="#" onclick="window.history.forward();return false;">window.history.forward()</a></p>
+		<p><a href="#" onclick="window.history.go(-2);return false;">window.history.go(-2)</a></p>
+		<p><a href="#" onclick="window.history.go(2);return false;">window.history.go(2)</a></p>
+		
+		<h2>window.history.pushState</h2>
+		<p><a id="updatestate" href="#">update state</a></p>
+		<div id="output2"></div>
+		
+	</article>
+
+<script src="scripts/history.js"></script>
+</body>
+</html>

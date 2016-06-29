@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>HTML5 Canvas</title>
+<link rel="stylesheet" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+	<header>
+		<h1>An Introduction to JavaScript</h1>
+		<p>HTML5 Canvas</p>
+	</header>
+
+	<article>
+
+		<canvas id="mycanvas" width="300" height="300"></canvas>
+
+	</article>
+
+<script>
+var canvas = document.getElementById("mycanvas");
+
+if (canvas.getContext) {
+
+	var cxt = canvas.getContext("2d");
+
+	// define default styles
+	cxt.lineWidth = 6;
+	cxt.strokeStyle = "#333";
+	cxt.fillStyle = "#ccc";
+
+	// lines
+	cxt.beginPath();
+	cxt.moveTo(0,0);
+	cxt.lineTo(150,150);
+	cxt.lineTo(100,200);
+	cxt.bezierCurveTo(300,150,0,0,200,300);
+	cxt.stroke();
+
+	// clear top-left square
+	cxt.clearRect(0,0,50,50);
+
+	// circle
+	cxt.beginPath();
+	cxt.arc(200,80,50,0,Math.PI*2);
+	cxt.fill();
+	cxt.stroke();
+
+}
+
+</script>
+</body>
+</html>

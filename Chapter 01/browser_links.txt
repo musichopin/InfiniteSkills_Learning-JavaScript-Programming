@@ -1,0 +1,31 @@
+Web browser links
+
+Mozilla Firefox:
+http://getfirefox.com/
+
+Firebug (Firefox add-on):
+http://getfirebug.com/
+
+Google Chrome:
+http://www.google.com/chrome/
+
+Apple Safari:
+http://www.apple.com/safari/
+
+Opera:
+http://www.opera.com/
+
+Microsoft Internet Explorer:
+http://www.microsoft.com/ie/
+
+IE6 / IE7 Developer Toolbar:
+http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=18359
+
+Windows 7 Pro/Enterprise XP Mode:
+http://www.sitepoint.com/ie6-ie7-ie8-win7-xp-mode/
+
+Windows 7 Home XP Mode:
+http://www.sitepoint.com/ie6-ie7-ie8-windows-7-home/
+
+VirtualBox:
+http://www.virtualbox.org/

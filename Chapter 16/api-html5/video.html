@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>HTML5 Audio and Video</title>
+<link rel="stylesheet" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+	<header>
+		<h1>An Introduction to JavaScript</h1>
+		<p>HTML5 Audio and Video</p>
+	</header>
+
+	<article>
+
+		<video id="bunny" poster="videos/bunny.jpg">
+			<source src="videos/bunny.mp4" type="video/mp4" />
+			<source src="videos/bunny.webm" type="video/webm" />
+		</video>
+
+		<div id="controls">
+			<a id="play" href="#">Play</a>
+			<span id="timer">0%</span>
+		</div>
+
+	</article>
+
+<script>
+var
+	video = document.getElementById("bunny"),
+	play = document.getElementById("play"),
+	timer = document.getElementById("timer"),
+	update;
+
+video.addEventListener("click", PlayVideo, false);
+play.addEventListener("click", PlayVideo, false);
+
+// play or pause video
+function PlayVideo(e) {
+
+	e.preventDefault();
+
+	if (video.paused) {
+
+		video.play();
+		play.textContent = "Pause";
+
+		update = setInterval( function() {
+			timer.textContent = Math.round(video.currentTime / video.duration * 100) + "%";
+		}, 500);
+
+	}
+	else {
+
+		video.pause();
+		play.textContent = "Play";
+
+		if (update) clearInterval(update);
+
+	}
+
+}
+</script>
+</body>
+</html>

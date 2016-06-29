@@ -1,0 +1,58 @@
+*
+{
+	padding: 0;
+	margin: 0;
+}
+
+html, body
+{
+	display: block;
+	height: 100%;
+}
+
+body
+{
+	font: normal 200%/1.3em sans-serif; 
+	color: #333;
+	background-color: #fff;
+}
+
+header
+{
+	display: block;
+	padding: 6px;
+	margin: 0;
+	color: #fff;
+	background-color: #666;
+	border: 3px double #fff;
+}
+
+h1
+{
+	font-size: 1.4em;
+	text-align: center;
+	font-weight: normal;
+	margin-bottom: 4px;
+}
+
+header p
+{
+	text-align: center;
+	margin: 0;
+}
+
+p
+{
+	margin: 0 0 0.2em 0;
+}
+
+#ball
+{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	left: 50%;
+	top: 50%;
+	background-color: #f00;
+	border-radius: 40px;
+}

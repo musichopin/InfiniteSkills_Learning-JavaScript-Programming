@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Optional Arguments</title>
+<link rel="stylesheet" type="text/css" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+<h1>Optional Arguments (b)</h1>
+
+<div id="message"></div>
+
+<script src="scripts/module2b.js"></script>
+<script>
+Lib.Output.Write("Hello world 1");
+Lib.Output.Write({
+	msg: ["Hello", "world", 2, "from", "JavaScript"],
+	end: 2,
+	color: "#C00"
+});
+</script>
+
+</body>
+</html>

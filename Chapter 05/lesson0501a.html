@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Functions</title>
+<link rel="stylesheet" type="text/css" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+<h1>Functions</h1>
+
+<script>
+
+// calculate the factorial of num
+function factorial(num) {
+
+	num = Number(num);
+	if (num < 0) {
+		return null;
+	}
+
+	var f = 1;
+	for (var i = 2; i <= num; i++) {
+		f *= i;
+	}
+	return f;
+}
+
+console.log( factorial(5) );
+console.log( factorial(10) );
+
+</script>
+
+</body>
+</html>

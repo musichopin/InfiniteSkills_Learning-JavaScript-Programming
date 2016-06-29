@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Error Handling</title>
+<link rel="stylesheet" type="text/css" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+<h1>Error handling</h1>
+
+<p id="messageX"></p>
+
+<script>
+
+// set-up variables
+var cakes = 10;
+var children = 3;
+var msg;
+
+if (children > 0) {
+
+	// cake calculation
+	var cakesEach = Math.floor(cakes / children);
+	var leftOver = cakes % children;
+	msg = "Each child receives " + cakesEach + " cakes, with " + leftOver + " left over";
+
+}
+else {
+	msg = "Invalid input!";
+}
+
+
+var p = document.getElementById("message");
+if (p) {
+	p.textContent = msg;
+}
+
+</script>
+
+</body>
+</html>

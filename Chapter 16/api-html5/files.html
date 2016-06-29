@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>HTML5 File Handling</title>
+<link rel="stylesheet" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+	<header>
+		<h1>An Introduction to JavaScript</h1>
+		<p>HTML5 File Handling</p>
+	</header>
+
+	<article>
+	
+		<form id="upload" action="#" method="get">
+
+			<fieldset>
+
+				<div>
+					<label for="fileselect">Files to upload:</label>
+					<input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
+				</div>
+				
+				<div id="filedrop">or drop files here</div>
+
+			</fieldset>
+
+		</form>
+	
+		<h2>File information:</h2>
+		<div id="output"></div>
+
+	</article>
+
+<script>
+// output information
+function Output(msg) {
+	var m = document.getElementById("output");
+	m.innerHTML = msg + m.innerHTML;
+}
+
+
+// drop box hover effect
+function FileHover(e) {
+	e.preventDefault();
+	e.target.className = (e.type == "dragover" ? "hover" : "");
+}
+
+
+// file selection
+function FileSelect(e) {
+	FileHover(e);
+	
+	var files = e.target.files || e.dataTransfer.files;
+
+	// process all files
+	for (var i = 0, f; f = files[i]; i++) {
+		ParseFile(f);
+	}
+
+}
+
+
+// output file information
+function ParseFile(file) {
+
+	// file information
+	Output(
+		"<p>File information: <strong>" + file.name +
+		"</strong> type: <strong>" + file.type +
+		"</strong> size: <strong>" + file.size +
+		"</strong> bytes</p>"
+	);
+
+	// display an image
+	if (file.type.indexOf("image") == 0) {
+		var reader = new FileReader();
+		reader.onload = function(e) {
+			Output(
+				"<p><strong>" + file.name + ":</strong><br />" + 
+				'<img src="' + e.target.result +
+				'" /></p>'
+			);
+		}
+		reader.readAsDataURL(file);
+	}
+
+	// display text
+	if (file.type.indexOf("text") == 0) {
+		var reader = new FileReader();
+		reader.onload = function(e) {
+			Output(
+				"<p>" + file.name +
+				": <p><pre>" + e.target.result +
+				"</pre>"
+			);
+		}
+		reader.readAsText(file);
+	}
+
+}
+
+
+// initialization
+if (window.File && window.FileList && window.FileReader) {
+	
+	// select box used
+	var fileselect = document.getElementById("fileselect");
+	fileselect.addEventListener("change", FileSelect, false);
+	
+	// drop box used
+	var filedrop = document.getElementById("filedrop");
+	filedrop.addEventListener("dragover", FileHover, false);
+	filedrop.addEventListener("drop", FileSelect, false);
+	
+}
+</script>
+</body>
+</html>

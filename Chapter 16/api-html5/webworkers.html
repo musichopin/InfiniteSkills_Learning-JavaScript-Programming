@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>HTML5 Web Workers</title>
+<link rel="stylesheet" media="all" href="styles/styles.css" />
+</head>
+<body>
+
+	<header>
+		<h1>An Introduction to JavaScript</h1>
+		<p>HTML5 Web Workers</p>
+	</header>
+
+	<article>
+
+		<h1 id="output">Working&hellip;</h1>
+		
+	</article>
+
+<script>
+// load web worker
+var worker = new Worker("scripts/webworker.js");
+
+// message received from web worker
+worker.onmessage = function(e) {
+	document.getElementById("output").textContent = e.data;
+}
+
+// start web worker
+worker.postMessage(2299999999);
+</script>
+</body>
+</html>
