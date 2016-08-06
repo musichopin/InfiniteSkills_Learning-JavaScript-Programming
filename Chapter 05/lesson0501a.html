@@ -13,8 +13,12 @@
 
 // calculate the factorial of num
 function factorial(num) {
+	// alt: variable kullanılabilir ancak çağırıldıktan önce yaratılmış olması gerekir
+	// var factorial = function(num)
 
+	// potato is turned into 0 (?) (result becomes 1 for 0! = 1)
 	num = Number(num);
+
 	if (num < 0) {
 		return null;
 	}
@@ -26,8 +30,14 @@ function factorial(num) {
 	return f;
 }
 
-console.log( factorial(5) );
-console.log( factorial(10) );
+console.log("5! = " + factorial(5) );
+console.log("10! = " + factorial(10) );
+console.log( factorial("potato") );
+console.log( factorial("-1") );
+
+// alt: functionda variable kullanılırsa
+// var f = factorial;
+// console.log( f(5) );
 
 </script>
 

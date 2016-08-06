@@ -11,7 +11,10 @@
 
 <script>
 
+// writing functions without arguments
 function showMessage() {
+	// there is a special variable named arguments and
+	// arguments holds all the values we pass into a function
 	var s = "";
 	for (var i = 0; i < arguments.length; i++) {
 		s += arguments[i] + " ";
@@ -20,6 +23,18 @@ function showMessage() {
 }
 
 console.log( showMessage("Hello", "from", "JavaScript", "again") );
+
+
+// writing functions with unpaired no of parameters
+function showMessagee(a, b, c) {
+	a = a || "";
+	b = b || "";
+	c = c || "";
+
+	console.log(a + " " + b + " " + c);
+}
+
+showMessagee("Hello");
 
 </script>
 

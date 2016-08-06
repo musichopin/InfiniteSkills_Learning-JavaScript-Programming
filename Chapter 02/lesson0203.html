@@ -9,12 +9,20 @@
 
 <script>
 alert("Hello!");
+SayHello();
+// code in this block cannot reference code in the second block
+// when we load multiple script we need to load our dependencies first,
+// that is least dependent code followed by more dependent code
+// also because js execution blocks all of the browser actions it is best to load them at the very end of the page just before the closing body tag
 </script>
 
 <h1>When does JavaScript run?</h1>
 
 <script>
-alert("Goodbye!");
+// doesnt load this function
+function SayHello(){
+	alert("Goodbye!");
+}
 </script>
 
 </body>

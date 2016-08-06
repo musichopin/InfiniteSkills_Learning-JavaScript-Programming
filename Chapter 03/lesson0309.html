@@ -9,7 +9,7 @@
 
 <h1>Error handling</h1>
 
-<p id="messageX"></p>
+<p id="message"></p>
 
 <script>
 
@@ -18,6 +18,8 @@ var cakes = 10;
 var children = 3;
 var msg;
 
+// js is resilient and doesn’t throw errors even when divide by 0 occurs. 
+// that’s why be careful with try catch blocks
 if (children > 0) {
 
 	// cake calculation
@@ -35,6 +37,18 @@ var p = document.getElementById("message");
 if (p) {
 	p.textContent = msg;
 }
+
+
+// alt:
+
+// try {
+// 	var p = document.getElementById("message");
+// 	p.textContent = msg;
+// } catch(e) {
+// 	console.error(e);
+// } finally {
+// 	alert("done");
+// }
 
 </script>
 

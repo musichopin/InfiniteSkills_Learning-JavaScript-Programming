@@ -15,7 +15,17 @@
 var n = 42;
 var msg = n+" squared is "+(n*n);
 
+console.log(msg); // for debugging (appears on console)
 
+alert(msg); // not preferred (bad user experience, prevents js to load)
+
+
+document.write("<h1> Less preferred </h1>"); // less preferred (limited, slower, less editable)
+
+// preferred
+var p = document.getElementById("message"); 
+p.textContent = msg; // for text alone
+p.innerHTML = "<em>" + msg + "</em>"; // for tags
 </script>
 
 </body>

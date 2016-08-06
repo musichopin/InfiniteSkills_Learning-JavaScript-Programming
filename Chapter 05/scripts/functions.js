@@ -2,7 +2,7 @@
 var msg = document.getElementById("message");
 
 do {
-	var num = prompt("Factorial (hit OK to end)", "");
+	var num = prompt("Factorial (hit OK to end)", "5");
 	if (num !== "") {
 		msg.textContent = num + "! = " + factorial(num);
 	}
@@ -11,6 +11,8 @@ do {
 	}
 }
 while (num);
+// alt: 
+// while (num !== "");
 
 
 // calculate factorials
