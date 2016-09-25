@@ -86,19 +86,22 @@ th, td
 
 th
 {
-	color: #fff;
-	background-color: #333;
+	color: #fff; 
+	background-color: #333; /*bg color sahibi olacağı için highlight gözükmez*/
 }
 
+/*colors column when a class of active is applied to those elements*/
 col.active
 {
 	background-color: #ddd;
 }
 
-tr.active td
+/*colors row when a class of active is applied to those elements*/
+tr.active td /*"td" ile spesifikleştirilerek th'nin highlight'ı (row tarafında) engellendi*/
 {
 	background-color: #ddd;
 }
+
 
 tr td:hover, tr td:focus
 {

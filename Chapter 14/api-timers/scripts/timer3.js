@@ -15,7 +15,12 @@ if (!window.requestAnimationFrame) window.requestAnimationFrame = window.webkitR
 // move ball	
 function AnimateBall() {
 
+	// requestAnimationFrame is especially useful for game programming.
+	// we cannot set interval with requestAnimationFrame unlike settimeout 
+	// and setinterval methods. 
+	// requestAnimationFrame tells the browser when it is most suitable
 	window.requestAnimationFrame(AnimateBall);
+	// *we pass animateball function into requesanimationframe of window object*
 
 	bx += dx;
 	by += dy;

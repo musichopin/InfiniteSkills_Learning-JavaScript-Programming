@@ -20,5 +20,26 @@
 
 </article>
 
+<script>
+// method 1:
+var p2 = document.getElementById("p2");
+
+console.clear();
+p1.parentNode.removeChild(p1);
+
+// method 2: loop
+// if we didn't know how many nodes we had to remove we could write a loop:
+var article = document.getElementsByTagName("article")[0];
+
+while(article.childNodes.length){
+	article.removeChild(article.lastChild);
+}
+
+// // method 3 (rarely used): replaceChild method removes a child and replaces with another
+// var article = document.getElementsByTagName("article")[0];
+// article.replaceChild(p2, p1); // p2 is new node, and p1 is the one to be replaced
+
+</script>
+
 </body>
 </html>

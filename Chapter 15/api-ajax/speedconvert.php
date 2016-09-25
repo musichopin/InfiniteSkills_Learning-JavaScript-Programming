@@ -9,7 +9,13 @@
  * unit=<mph|kph|mps|fps>
  * format=<json|jsonp|xml|text>
  * callback=<function> (for jsonp only)
+ *
  * e.g. convertspeed.php?speed=10&units=mph
+
+http://localhost:81/my-site/speedconvert.php?speed=30&unit=kph&format=jsonp&callback=myfunction 
+
+http://localhost:81/my-site/speedconvert.php?speed=30&format=html
+ etc
  *
  * returns all speed conversion values
  */
@@ -28,7 +34,7 @@ $out = array(
 );
 
 // factors from mph
-$factor = array(
+$factor = array( // md array değil
 	'mph' => 1,
 	'kph' => 1.609,
 	'fps' => 1.467,
@@ -50,15 +56,21 @@ if (!array_key_exists($unit, $out)) {
 	$unit = 'mph';
 }
 
-// starting speed
+// starting speed (gereksiz gibi)
 $out[$unit] = $speed;
 
 // convert to mph
 $out['mph'] = $speed * 1/$factor[$unit];
 
-// convert other values
+// convert other values (mph ve query string dışındaki birimlere çevirir)
 foreach ($out as $u => $v) {
+	// echo $out[$u]; // alt: echo $v;
+	// echo "<br>";
+	// echo $u;
+	// echo "<br>";
 	$out[$u] = round($out['mph'] * $factor[$u], 2);
+	// echo $out[$u]; // echo $v; alt değil
+	// echo "<br>";
 }
 
 // output correct format
@@ -74,8 +86,9 @@ switch (strtolower(fetch('format'))) {
 	
 	// html
 	case 'html':
+		// header redirects to another page
 		header('Content-Type: text/html; charset=UTF-8');
-		echo "<table>\n";
+		echo "<table>\n"; // php içinde olduğundan quote içerisinde
 		foreach ($out as $n => $v) {
 			echo '<tr><th>', $n, '</th><td>', number_format($v,2), "</td></tr>\n";
 		}
@@ -84,7 +97,7 @@ switch (strtolower(fetch('format'))) {
 
 	// output XML
 	case 'xml':
-		header('Content-Type: text/xml; charset=UTF-8');
+		header('Content-Type: text/xml; charset=UTF-8'); 
 		$xml = new SimpleXMLElement('<speed/>');
 		array_walk($out, create_function('$i,$k', 'global $xml;$xml->addChild($k,$i);'));
 		echo $xml->asXML();

@@ -25,7 +25,9 @@ var n = [
 
 
 var sum = 0, e = 0;
+// everything is object in js including methods passed
 Lib.Array.Recurse( n, function(x) { e++; sum += x; } );
+// sum holds the total and e is no of values
 
 document.getElementById("message").innerHTML +=
 	"<p>Array sum = " + sum + "</p>" +

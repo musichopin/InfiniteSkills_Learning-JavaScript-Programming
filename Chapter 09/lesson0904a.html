@@ -11,11 +11,14 @@
 
 <div id="message"></div>
 
+<!-- it is recommended that we become flexible in passing arguments -->
 <script src="scripts/module2a.js"></script>
 <script>
 Lib.Output.Write("Hello world 1");
 Lib.Output.Write("Hello world 2", "message");
 Lib.Output.Write(["Hello", "world", 3, "from", "JavaScript"], document.getElementById("message"), 0, 2, "#C00");
+// 0: start index of the array passed
+// 2: end index of the array passed
 </script>
 
 </body>

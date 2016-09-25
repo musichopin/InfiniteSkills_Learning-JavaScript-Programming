@@ -73,6 +73,7 @@ var
 
 // form submit - direct to Ajax call
 speedform.addEventListener("submit", function(e) {
+	// for small chunks of information
 	e.preventDefault();
 	Lib.Ajax.Hijack(speedform, function(r) {
 		

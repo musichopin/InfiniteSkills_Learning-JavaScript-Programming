@@ -7,7 +7,12 @@ Lib.Output = (function() {
 	function Write(opt) {
 		
 		if (opt.constructor != Object) opt = { msg: opt };
+		// if object is not passed we create a new object literal
+		// and set the msg property to our opt parameter
 		
+		// we set our default values within our object literal
+		// this is passed to an extend function with our opt object literal
+		// effectively any of default values can be overridden by a value within opt
 		opt = Extend({
 			element: "message",
 			msg: [],
@@ -16,6 +21,7 @@ Lib.Output = (function() {
 			color: "#000"
 		}, opt);
 		
+		// and now we can address each argument with opt.sth
 		if (opt.msg.constructor != Array) opt.msg = [opt.msg];
 		opt.element = opt.element || "message";
 		if (!opt.element.nodeType) opt.element = document.getElementById(opt.element);
@@ -26,15 +32,26 @@ Lib.Output = (function() {
 	
 		opt.element.innerHTML += '<p style="color:'+opt.color+'">'+opt.msg.slice(opt.start,opt.end+1).join(" ")+'</p>';
 	}
-	
+
 	// extend default parameters
 	function Extend(obj1, obj2) {
+		// loops through every property in the object we passed
+		// and if it finds one it appends it to the default set
+		// and then returns that set back to our function
 	
 		for (var prop in obj2) {
 			if (obj2.hasOwnProperty(prop)) obj1[prop] = obj2[prop];
 		}
 		
 		return obj1;
+
+		// var car2 = car2 || {};
+		// 
+		// for (var prop in car) {
+		// 	if (car.hasOwnProperty(prop)) {
+		// 		car2[prop] = car[prop];
+		// 	}
+		// }
 	}
 
 	return {

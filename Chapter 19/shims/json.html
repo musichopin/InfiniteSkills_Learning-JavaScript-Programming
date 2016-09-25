@@ -49,7 +49,7 @@
 	</article>
 
 
-<script src="scripts/shim-json.js"></script>
+<script src="scripts/shim-json.js"></script> <!-- *FOR IE 7 OR BELOW* -->
 <script>
 // output function
 var log = document.getElementById("log");
@@ -86,13 +86,17 @@ Output("<strong>obj.arr[6][1]:</strong> "+obj.arr[6][1]);
 Output("<strong>obj.ob.e.f:</strong> "+obj.ob.e.f);
 
 // serialize to JSON
+// serialize object to string
 var jsonobj = JSON.stringify(obj);
 Output("Serializing to JSON:");
 Output(jsonobj);
 
 // deserialize back to object
+// converts back the string to a native object
 obj = JSON.parse(jsonobj);
 
+// we output same values to make sure 
+// serialization and deserialization works
 Output("Values from deserialized obj:");
 Output("<strong>obj.str:</strong> "+obj.str);
 Output("<strong>obj.num:</strong> "+obj.num);

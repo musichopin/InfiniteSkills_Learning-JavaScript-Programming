@@ -1,6 +1,7 @@
 // session storage
-var ss = window.sessionStorage;	// temporary session storage
-var ls = window.localStorage;		// permanent storage
+var ss = window.sessionStorage;	// temporary (particular to one tab) session storage
+var ls = window.localStorage; // permanent (leakable amongst tabs) storage
+// *local storage data stays until user deletes browser data*
 
 /*
 Both support the following properties and methods:
@@ -12,6 +13,7 @@ Both support the following properties and methods:
 	clear()					- clear the store
 */
 
+// *it doesnt have to be output in the order we stored them*
 ss.setItem("a", 100);
 ss.setItem("b", 200);
 ss.setItem("c", 300);
@@ -25,8 +27,9 @@ ss.removeItem("b");
 ls.clear();
 
 // show sessionStorage values
+// h2 tagi otomatik olarak yeni paragrafa atar
 var k, msg = "<h2>sessionStorage (" + ss.length + " items)</h2>";
-for (k in ss) {
+for (k in ss) { // k defined here
 	msg += "<p>" + k + " = " + ss.getItem(k) + "<p>";
 }
 

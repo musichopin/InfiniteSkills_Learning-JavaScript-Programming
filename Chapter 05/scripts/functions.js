@@ -17,8 +17,8 @@ while (num);
 
 // calculate factorials
 function factorial(num) {
-	num = Number(num);
-	if (num < 0) {
+	num = Number(num); // harf için etkisi olmadı (?)
+	if (num < 0) { // negatif sayı için etkisi oldu
 		return null;
 	}
 	var f = 1;

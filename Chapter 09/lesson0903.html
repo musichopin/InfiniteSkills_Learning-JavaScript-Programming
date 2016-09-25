@@ -11,14 +11,15 @@
 
 <div id="message">Messages will appear here</div>
 
-<script src="scripts/module.js"></script>
+<script src="scripts/module.js"></script> <!-- içerisindeki fonksyion çağırıldığı için önce yaratmamıza dikkat (self-executing fonksiyon olması önemli değil) -->
 <script>
 Lib.Output.Clear();
 Lib.Output.Write("This is my first message.");
 Lib.Output.$("This is my second message.");
 Lib.Output.SetColor("#C00");
 Lib.Output.$("Modules are great!");
-var x = Lib.Output.FormatMessage("test"); // this will fail
+var x = Lib.Output.FormatMessage("test"); // *this will fail*
+// bc FormatMessage exists internally but not outside of that module
 Lib.Output.$(x);
 </script>
 

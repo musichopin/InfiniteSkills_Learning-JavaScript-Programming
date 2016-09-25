@@ -19,12 +19,15 @@
 		<h2>window.history</h2>
 		<div id="output1"></div>
 		
+		<!-- inline js methods (normally inline js not recommended) -->
+		<!-- *event onclick, handling ise sağdaki metodlar* -->
 		<p><a href="#" onclick="window.history.back();return false;">window.history.back()</a></p>
 		<p><a href="#" onclick="window.history.forward();return false;">window.history.forward()</a></p>
 		<p><a href="#" onclick="window.history.go(-2);return false;">window.history.go(-2)</a></p>
 		<p><a href="#" onclick="window.history.go(2);return false;">window.history.go(2)</a></p>
 		
 		<h2>window.history.pushState</h2>
+		<!-- *event handling js üzerinden halledilmiş* -->
 		<p><a id="updatestate" href="#">update state</a></p>
 		<div id="output2"></div>
 		

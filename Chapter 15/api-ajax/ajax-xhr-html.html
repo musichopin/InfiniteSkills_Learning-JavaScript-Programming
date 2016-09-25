@@ -13,8 +13,7 @@
 	</header>
 	
 	<article>
-		
-		<form id="speedform" action="http://localhost/js/speedconvert.php" method="get">
+		<form id="speedform" action="http://localhost:81/my-site/speedconvert.php " method="get">
 			<fieldset>
 			<legend>Speed conversion</legend>
 			
@@ -28,6 +27,7 @@
 				<option value="mps">meters per second</option>
 			</select>
 			
+			<!-- specifies the format -->
 			<input type="hidden" name="format" value="html" />
 			
 			<button type="submit">Convert</button>
@@ -45,6 +45,7 @@
 			</table>
 		
 		</div>
+		<!-- *when we submit this form we want to replace above table with a new section of html showing the result* -->
 		
 	</article>
 

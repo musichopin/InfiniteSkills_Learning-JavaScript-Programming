@@ -13,12 +13,18 @@
 
 <script src="scripts/module2b.js"></script>
 <script>
-Lib.Output.Write("Hello world 1");
+Lib.Output.Write("Hello world 1"); // less preferable
+// more preferable: we are passing object literal. 
+// it is easier to read what each parameter does
+// parameters themselves can be passed in any order
+// and we can omit any parameter we don't like (we needed to pass every argument up to the last one even if we wanted to pass the last argument (color) alone)
 Lib.Output.Write({
 	msg: ["Hello", "world", 2, "from", "JavaScript"],
 	end: 2,
 	color: "#C00"
 });
+// less preferable:
+// Lib.Output.Write(["Hello", "world", 3, "from", "JavaScript"], document.getElementById("message"), 0, 2, "#C00");
 </script>
 
 </body>

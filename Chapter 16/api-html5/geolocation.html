@@ -23,8 +23,10 @@
 var geo = document.getElementById("geo");
 
 // do geolocation
-if (navigator.geolocation) {
+if (navigator.geolocation) { // checks whether browser supports geolocation
 	navigator.geolocation.getCurrentPosition(geoSuccess, geoFailed);
+	// calls geolocation object and calls getCurrentPosition method
+	// geoSuccess and geoFailed functions run on success and failure respectively
 }
 else {
 	geo.textContent = "Sorry - your browser does not support geolocation.";
@@ -33,11 +35,15 @@ else {
 // geolocation successful
 function geoSuccess(position) {
 	/*
-		latitude = position.coords.latitude
+		latitude = position.coords.latitude 
+		// position parameter provides coords object which contains properties for the latitude, 
+		// longitude and accuracy
 		longitude = position.coords.longitude
 		accuracy (meter radius) = position.coords.accuracy
 	*/
 	
+	// below lines belong to google maps
+	// it loads the map and sets the center to the position we got
 	var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 	var mapOpts = {
 		zoom: 13,

@@ -1,4 +1,4 @@
-// bouncing ball using setInterval
+// bouncing ball using setInterval built-in method
 var
 	body = document.getElementsByTagName("body")[0],
 	ball = document.getElementById("ball");
@@ -18,11 +18,15 @@ function AnimateBall() {
 	
 	if (bx + dx < 0 || bx + bw + dx > body.offsetWidth) dx = -dx;
 	if (by + dy < 0 || by + bh + dy > body.offsetHeight) dy = -dy;
+
+	// there is no timeout function within animateball function this time
 	
 }
 
 // start animation
 var st = setInterval(AnimateBall, 10);
+// *unlike settimeout function setInterval method continuously 
+// executes animateball function every 10 ms*
 
-// stop ball on click
+// stop ball on click within every 10 ms of moving
 ball.addEventListener( "click", function() { clearInterval(st); } );

@@ -83,6 +83,8 @@ fieldset
 	border-radius: 6px;
 }
 
+input#fileselect {width:220px;}
+
 legend
 {
 	padding: 0 0.5em;

@@ -23,14 +23,17 @@ var mysvg = document.getElementById("mysvg");
 var svg = mysvg.contentDocument;
 
 var line = svg.getElementById("line");
+// gets the line id of the existing line from image.svg file
 
 // animate line
 var y = 10;
-(function() {
+(function() { // SVG offers its own animation functions
 	y += 2;
-	line.setAttributeNS(null,"y1",y);
+	line.setAttributeNS(null,"y1",y); // NS stands for namespace
 	line.setAttributeNS(null,"y2",300-y);
 	if (y < 290) setTimeout(arguments.callee, 20);
+	// we reference the anonymous function with arguments.callee 
+	// and it calls itself in every 20 ms
 }());
 
 // create rectangle
@@ -43,6 +46,7 @@ rect.setAttributeNS(null,"height",50);
 rect.setAttributeNS(null,"fill","#393");
 
 svg.getElementById("main").appendChild(rect);
+// because the rectangle is placed after the line on image.svg file, it is on top of it
 
 </script>
 </body>

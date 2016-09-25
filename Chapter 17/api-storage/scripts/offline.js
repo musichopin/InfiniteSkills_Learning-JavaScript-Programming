@@ -3,6 +3,8 @@ var online;
 window.addEventListener("online", CheckOnlineStatus);
 window.addEventListener("offline", CheckOnlineStatus);
 CheckOnlineStatus();
+// *we also called CheckOnlineStatus() explicitly bc when the app first starts 
+// we need to know what the status is as well*
 
 // check online status
 function CheckOnlineStatus() {

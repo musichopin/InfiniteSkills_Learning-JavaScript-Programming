@@ -16,7 +16,24 @@
 
 	<p>More information about browser event handling:</p>
 	<p>
-		<a
+
+		<!-- we should not use inline event handler 
+		(link is not followed for returning false): -->
+		<!-- method 1a -->
+		<!-- <a onclick="alert('ouch!'); return false;"
+
+		href="https://developer.mozilla.org/DOM_Client_Object_Cross-Reference/DOM_Events">
+		https://developer.mozilla.org/DOM_Client_Object_Cross-Reference/DOM_Events
+		</a> -->
+
+		<!-- method 1b: there is no guarantee that we call MyEventHandler() before script is loaded (downside of using inline event handling) -->
+		<!-- <a onclick="MyEventHandler();"
+
+		href="https://developer.mozilla.org/DOM_Client_Object_Cross-Reference/DOM_Events">
+		https://developer.mozilla.org/DOM_Client_Object_Cross-Reference/DOM_Events
+		</a> -->
+
+		<a 
 			href="https://developer.mozilla.org/DOM_Client_Object_Cross-Reference/DOM_Events"
 		>
 		https://developer.mozilla.org/DOM_Client_Object_Cross-Reference/DOM_Events</a>

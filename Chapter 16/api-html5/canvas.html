@@ -22,8 +22,10 @@
 var canvas = document.getElementById("mycanvas");
 
 if (canvas.getContext) {
+	// if the browsers supports canvas it will have a getcontext property
 
 	var cxt = canvas.getContext("2d");
+	// returns an object which allows us to draw on the canvas element
 
 	// define default styles
 	cxt.lineWidth = 6;
@@ -36,14 +38,15 @@ if (canvas.getContext) {
 	cxt.lineTo(150,150);
 	cxt.lineTo(100,200);
 	cxt.bezierCurveTo(300,150,0,0,200,300);
-	cxt.stroke();
+	// bezierCurveTo takes end point and 2 control points 	
+	cxt.stroke(); // we need stroke() to complete the path
 
 	// clear top-left square
 	cxt.clearRect(0,0,50,50);
 
 	// circle
 	cxt.beginPath();
-	cxt.arc(200,80,50,0,Math.PI*2);
+	cxt.arc(200,80,50,0,Math.PI*2); // takes center points, radius, starting radian and ending radian
 	cxt.fill();
 	cxt.stroke();
 

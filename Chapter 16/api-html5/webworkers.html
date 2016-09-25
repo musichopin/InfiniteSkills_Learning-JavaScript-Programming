@@ -19,16 +19,23 @@
 	</article>
 
 <script>
-// load web worker
+// load/call web worker
+// create a new worker object which points to webworker script
 var worker = new Worker("scripts/webworker.js");
 
 // message received from web worker
+// this function (handling) runs when a message is returned (event) from the web worker (element)
 worker.onmessage = function(e) {
 	document.getElementById("output").textContent = e.data;
 }
 
 // start web worker
 worker.postMessage(2299999999);
+
+// // without web worker (thread): cursor aktif olmaz ve browser unresponsive olur
+// var r = 2299999999;
+// while (r-- > 0);
+// document.getElementById("output").textContent = "Finished counting from 2299999999";
 </script>
 </body>
 </html>

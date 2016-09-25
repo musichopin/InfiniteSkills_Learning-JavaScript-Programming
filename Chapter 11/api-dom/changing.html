@@ -18,5 +18,45 @@
 
 </article>
 
+	<script>
+		
+	console.clear();
+
+	var p = document.getElementById("myelement");
+
+	console.log(p);
+	// prints, <p id="myelement">
+
+	// prints, null
+	// bc even though node value holds the text of any node,
+	// node we are looking at here cannot hold any text 
+	// for being an element
+	console.log(p.nodeValue);
+
+	// *text of a node is a separate child node unlike attributes of a node*
+	// prints, A paragraph.
+	console.log(p.childNodes[0].nodeValue);
+	// short way:
+	console.log(p.firstChild.nodeValue);
+
+	// prints, I've changed!
+	p.firstChild.nodeValue = "I've changed!" // browser'da gözükür
+	console.log(p.firstChild.nodeValue); // console'da gözükür
+
+	// prints, changed again
+	p.textContent = "changed again"
+	console.log(p.firstChild.nodeValue);
+
+	p.innerHTML = "<em>changed yet again!</em>";
+	console.log(p.firstChild.nodeValue); 
+	// console'da <em> tagi gözükürken browser'da 
+	// yazı italik olarak modifiye edilir
+
+	// outerHTML replaced p with div tag
+	p.outerHTML = "<div>removed the p tag</div>";
+	console.log(p.firstChild.nodeValue); 
+
+	</script>
+
 </body>
 </html>

@@ -16,7 +16,27 @@
 
 	<p id="myelement">A paragraph.</p>
 
+	<!-- js ve css sayesinde böyle gözükür:
+
+	<p id="myelement" class="animate" style="text-align: center; color: blue; background-color: rgb(255, 255, 0); border: 5px solid red;">A paragraph.</p> 
+
+	-->
+	
+
 </article>
 
+	<script>
+		console.clear();
+	var e = document.getElementById("myelement");
+	console.log(e);
+
+	e.style.textAlign = "center";
+	e.style.color = "blue";
+	e.style.backgroundColor = "#ff0";
+	e.style.border = "5px solid red";
+
+	e.className = "animate";
+	</script>
+	
 </body>
 </html>

@@ -11,16 +11,28 @@
 
 <script>
 
-// return a function
+// creates and returns a function
 function CreateFunction() {
+	document.write("Hello."); // ***fonksiyon çağırılmasa print etmeyecekti***
 
 	var message = "I was created by CreateFunction()";
-	return function() { alert(message); }
+	// local/private variable within CreateFunction function. 
+	// however we can declare its value outside of the function
 
+	return function() { alert(message); }
+	// ***value of the message variable is local to CreateFunction function
+	// however js retains a reference to message variable with anonymous function returning it
+	// so it becomes available globally (hence the name is closure)***
 }
 
-var f = CreateFunction();
-f();
+// fonksiyon return ettiği için "CreateFunction()" denir
+var f = CreateFunction(); // "hello" print edilir
+f(); /* *alert edilir* */
+// alt:
+// CreateFunction()();
+
+// function yerine variable return edilseydi:
+// document.write(f);
 
 </script>
 

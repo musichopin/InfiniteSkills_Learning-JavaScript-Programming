@@ -9,7 +9,7 @@ Lib.Array = (function() {
 	// loop through an array
 	function Recurse(a) {
 	
-		if (a.constructor == Array) {
+		if (a.constructor == Array) { // alt: if (a instanceof Array)
 			for (var i = 0; i < a.length; i++) {
 				Recurse(a[i]);
 			}

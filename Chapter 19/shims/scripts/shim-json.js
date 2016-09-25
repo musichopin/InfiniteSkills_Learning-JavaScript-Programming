@@ -1,3 +1,5 @@
+// ***THIS TUTORIAL IS ABOUT IE 7 OR BELOW WHICH MAKES NO SENSE***
+
 // Shim which implements JSON.stringify and JSON.parse
 var JSON = JSON || (function() {
 

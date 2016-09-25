@@ -2,6 +2,7 @@
 function ShowFlags() {
 
 	var pole = document.getElementById("pole"), newImg, i;
+
 	for (i = 0; i < fl; i++) {
 
 		newImg = CreateImage(flags[i]);
@@ -14,9 +15,10 @@ function ShowFlags() {
 // create flag image
 function CreateImage(name) {
 
-	var img = document.createElement("img");
-	img.src = "images/" + name + ".png";
-	img.title = name.substr(0,1).toUpperCase() + name.substr(1).toLowerCase();
+	var img = document.createElement("img"); // creates img element
+	img.src = "images/" + name + ".png"; // resim için
+	img.alt = name; // resim gözükmezse
+	img.title = name.substr(0,1).toUpperCase() + name.substr(1).toLowerCase(); // hover için
 	return img;
 
 }
@@ -27,6 +29,7 @@ var flags = [ "australia","canada","germany","italy","spain","uk","usa","china",
 // check flags
 // can use console.log, console.debug, console.info, console.warn, console.error
 var fl = flags.length;
+
 if (fl != 10) {
 	if (fl == 0) {
 		console.error("No flags defined.");
@@ -38,7 +41,9 @@ if (fl != 10) {
 
 // sort flags
 flags.sort();
+
 console.log(flags);
 
 // output flags
-ShowFlags();
+ShowFlags(); // *initiates by calling a function*
+// flags.sort()'dan sonra olması önemli

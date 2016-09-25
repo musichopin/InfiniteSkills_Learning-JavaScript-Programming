@@ -27,19 +27,21 @@
 	</article>
 
 <script>
-var
+var // we define variables all at once
 	video = document.getElementById("bunny"),
 	play = document.getElementById("play"),
 	timer = document.getElementById("timer"),
 	update;
 
-video.addEventListener("click", PlayVideo, false);
+video.addEventListener("click", PlayVideo, false); 
+// run PlayVideo function when video itself is clicked
+// playvideo yerine anonymous function kullanılabilirdi
 play.addEventListener("click", PlayVideo, false);
 
 // play or pause video
 function PlayVideo(e) {
 
-	e.preventDefault();
+	e.preventDefault(); // we prevent default action of ' href="#" '
 
 	if (video.paused) {
 
@@ -48,9 +50,10 @@ function PlayVideo(e) {
 
 		update = setInterval( function() {
 			timer.textContent = Math.round(video.currentTime / video.duration * 100) + "%";
-		}, 500);
+		}, 100); // anonymous function yerine external function kullanılabilirdi
 
 	}
+
 	else {
 
 		video.pause();

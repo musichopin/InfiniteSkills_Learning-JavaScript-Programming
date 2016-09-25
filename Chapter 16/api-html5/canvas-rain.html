@@ -29,14 +29,15 @@ if (canvas.getContext) {
 	setInterval(function() {
 		var	x = Math.round(Math.random()*canvas.width), 
 			y = Math.round(Math.random()*canvas.height),
-			e = 20 + Math.round(Math.random()*30),
+			e = 20 + Math.round(Math.random()*30), // daire çaplarının büyümesini sağlar
 			s = 0;
 		
-		(function() {
+		(function() { // self executing anonymous function
 			s++;
 			if (s <= e) {
-				setTimeout(arguments.callee,s);
-				var c = 255-(e-s)*3;
+				setTimeout(arguments.callee,s); // we reference the anonymous function with arguments.callee and it calls itself in every 20 ms
+				var c = 255-(e-s)*3; // rengi ayarlar
+				// aşağısı daire çizmek için yapılan bilindik kısım
 				cxt.strokeStyle = "rgb("+c+","+c+","+c+")";
 				cxt.beginPath();
 				cxt.arc(x,y,s,0,Math.PI*2,true);
@@ -44,7 +45,8 @@ if (canvas.getContext) {
 				cxt.stroke();
 			}
 		})();
-	},100);
+	},100); // alt: " },100)(); "
+	// 100 sn aralıkla yeni daireler oluşur
 
 }
 </script>
