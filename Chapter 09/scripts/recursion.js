@@ -14,12 +14,12 @@ Lib.Array = (function() {
 				Recurse(a[i]);
 			}
 		}
-		else element.innerHTML += a + "<br />";
+		else {element.innerHTML += a + "<br />"};
 	
 	}
 
 	return {
-		Recurse: Recurse
+		Recursee: Recurse
 	};
 
 }());

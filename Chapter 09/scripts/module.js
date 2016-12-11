@@ -1,5 +1,5 @@
 // My JavaScript Module
-var Lib = Lib || {}; // alt: var Lib = Lib || (function() {
+var Lib = Lib || {}; // *alt: using variable: var Lib = (function() {*
 // if Lib exists use it, otherwise create a new empty object.
 // single global object named Lib.
 // however Lib is not a great name choice since not being specific
